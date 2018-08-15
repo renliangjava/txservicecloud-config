@@ -1,0 +1,14 @@
+﻿spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+  application:   
+    name: txservicecloud-config-zjx-dev
+---
+spring:
+  profiles: test   
+  application:
+    name: txservicecloud-config-rl-test
