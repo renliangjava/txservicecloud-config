@@ -36,11 +36,6 @@ eureka:
   instance:
     instance-id: txservicecloud-dept8002
     prefer-ip-address: true
-info:
-  app.name: txservicecloud-dep
-  company.name: www.txjava.cn
-  build.artifactId: @project.artifactId@
-  build.version: @project.version@
     
 ---
 server:
@@ -74,8 +69,3 @@ eureka:
   instance:
     instance-id: txservicecloud-dept8002
     prefer-ip-address: true
-info:
-  app.name: txservicecloud-dep
-  company.name: www.txjava.cn
-  build.artifactId: @project.artifactId@
-  build.version: @project.version@
