@@ -7,6 +7,7 @@ spring:
    profiles: dev
    application: 
     name: txservicecloud-config-dept-client
+
 server:
   port: 8001
 mybatis:
@@ -37,11 +38,6 @@ eureka:
   instance:
     instance-id: txservicecloud-dept8001
     prefer-ip-address: true
-info:
-  app.name: txservicecloud-dep
-  company.name: www.txjava.cn
-  build.artifactId: @project.artifactId@
-  build.version: @project.version@
 ---
 spring: 
    profiles: test
@@ -78,8 +74,3 @@ eureka:
   instance:
     instance-id: txservicecloud-dept8011
     prefer-ip-address: true
-info:
-  app.name: txservicecloud-dep
-  company.name: www.txjava.cn
-  build.artifactId: @project.artifactId@
-  build.version: @project.version@
