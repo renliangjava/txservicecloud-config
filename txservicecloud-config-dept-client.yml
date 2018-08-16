@@ -2,24 +2,20 @@
   profiles:
     active:
     - dev
-    
 --- 
 
 server:
   port: 8001
   
 spring: 
- profiles: dev
- application: 
-  name: txservicecloud-config-dept-client
+  profiles: dev
+  application: 
+    name: txservicecloud-config-dept-client
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.zjx.springcloud.entity
   mapper-locations:
    - classpath:mybatis/mapper/**/*.xml
-spring:
-  application:
-    name: txservicecloud-dep
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
@@ -53,9 +49,6 @@ mybatis:
   type-aliases-package: com.zjx.springcloud.entity
   mapper-locations:
    - classpath:mybatis/mapper/**/*.xml
-spring:
-  application:
-    name: txservicecloud-dep
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
