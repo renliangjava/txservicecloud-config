@@ -1,71 +1,80 @@
-﻿spring: 
+spring: 
   profiles:
     active:
-      - dev
+    - dev
 --- 
-
 server:
   port: 8001
-  
 spring: 
-  profiles: dev
-  application: 
+   profiles: dev
+   application: 
     name: txservicecloud-config-dept-client
-mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.zjx.springcloud.entity
-  mapper-locations:
-   - classpath:mybatis/mapper/**/*.xml
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource        #当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver          #mysql驱动包
-    url: jdbc:mysql://localhost:3306/cloudDB02          #数据库名称
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB03
     username: root
     password: root
     dbcp2:
-      min-idle: 5                                       #数据库连接池的最小维持连接数
-      initial-size: 5                                   #初始化连接数
-      max-total: 5                                      #最大连接数
-      max-wait-millis: 200                              #等待连接获取的最大超时时间
-
-eureka:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200 
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: cn.tx.common.model
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+ 
+eureka: 
   client: #客户端注册进eureka服务列表内
-    service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-      #defaultZone: http://localhost:7001/eureka
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka
   instance:
-    instance-id: txservicecloud-dept8002
+    instance-id: dept-8001.com
     prefer-ip-address: true
-    
+ 
+info:
+  app.name: zjx-txservicecloud-springcloudconfig03-java1129
+  company.name: www.txjava.cn
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
 ---
 server:
-  port: 8011
+  port: 8001
 spring: 
    profiles: test
    application: 
     name: txservicecloud-config-dept-client
-mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.zjx.springcloud.entity
-  mapper-locations:
-   - classpath:mybatis/mapper/**/*.xml
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource        #当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver          #mysql驱动包
-    url: jdbc:mysql://localhost:3306/cloudDB02          #数据库名称
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB02
     username: root
     password: root
     dbcp2:
-      min-idle: 5                                       #数据库连接池的最小维持连接数
-      initial-size: 5                                   #初始化连接数
-      max-total: 5                                      #最大连接数
-      max-wait-millis: 200                              #等待连接获取的最大超时时间
-
-eureka:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200  
+  
+  
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: cn.tx.common.model
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+ 
+eureka: 
   client: #客户端注册进eureka服务列表内
-    service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-      #defaultZone: http://localhost:7001/eureka
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka
   instance:
-    instance-id: txservicecloud-dept8002
+    instance-id: dept-8001.com
     prefer-ip-address: true
+ 
+info:
+  app.name: atguigu-txservicecloud-springcloudconfig02
+  company.name: www.txjava.cn
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version
