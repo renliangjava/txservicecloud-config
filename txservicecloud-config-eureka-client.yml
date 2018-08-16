@@ -3,36 +3,35 @@
     active: 
     - dev
 ---
-server: 
-  port: 7001
-   
 spring: 
   profiles: dev
   application:
     name: txservicecloud-config-eureka-client
     
-eureka: 
-  instance: 
+server:
+  port: 7001
+eureka:
+  instance:
     hostname: eureka7001.com
-  client: 
+  client:
     register-with-eureka: false
     fetch-registry: false
-    service-url: 
+    service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
 ---
-server: 
-  port: 7001
-   
+
 spring: 
   profiles: test
   application:
     name: txservicecloud-config-eureka-client
     
-eureka: 
-  instance: 
+server:
+  port: 7001
+eureka:
+  instance:
     hostname: eureka7001.com
-  client: 
+  client:
     register-with-eureka: false
     fetch-registry: false
-    service-url: 
+    service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
