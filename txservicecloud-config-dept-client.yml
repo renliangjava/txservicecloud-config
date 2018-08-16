@@ -3,6 +3,10 @@
     active:
     - dev
 --- 
+spring: 
+   profiles: dev
+   application: 
+    name: txservicecloud-config-dept-client
 server:
   port: 8001
 mybatis:
@@ -39,6 +43,11 @@ info:
   build.artifactId: @project.artifactId@
   build.version: @project.version@
 ---
+spring: 
+   profiles: test
+   application: 
+    name: txservicecloud-config-dept-client
+
 server:
   port: 8011
 mybatis:
