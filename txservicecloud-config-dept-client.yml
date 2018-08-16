@@ -13,27 +13,27 @@ spring:
  application: 
   name: txservicecloud-config-dept-client
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml    #mybatis配置文件所在路径
-  type-aliases-package: com.zjx.springcloud.entity      #所有Entity别名类所在包
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.zjx.springcloud.entity
   mapper-locations:
-   - classpath:mybatis/mapper/**/*.xml                   #mapper映射文件
+   - classpath:mybatis/mapper/**/*.xml
 spring:
   application:
     name: txservicecloud-dep
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource        #当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver          #mysql驱动包
-    url: jdbc:mysql://localhost:3306/cloudDB01          #数据库名称
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB01
     username: root
     password: root
     dbcp2:
-      min-idle: 5                                       #数据库连接池的最小维持连接数
-      initial-size: 5                                   #初始化连接数
-      max-total: 5                                      #最大连接数
-      max-wait-millis: 200                              #等待连接获取的最大超时时间
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
 
 eureka:
-  client: #客户端注册进eureka服务列表内
+  client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
       #defaultZone: http://localhost:7001/eureka
@@ -49,27 +49,27 @@ spring:
    application: 
     name: txservicecloud-config-dept-client
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml    #mybatis配置文件所在路径
-  type-aliases-package: com.zjx.springcloud.entity      #所有Entity别名类所在包
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.zjx.springcloud.entity
   mapper-locations:
-   - classpath:mybatis/mapper/**/*.xml                   #mapper映射文件
+   - classpath:mybatis/mapper/**/*.xml
 spring:
   application:
     name: txservicecloud-dep
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource        #当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver          #mysql驱动包
-    url: jdbc:mysql://localhost:3306/cloudDB01          #数据库名称
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB01
     username: root
     password: root
     dbcp2:
-      min-idle: 5                                       #数据库连接池的最小维持连接数
-      initial-size: 5                                   #初始化连接数
-      max-total: 5                                      #最大连接数
-      max-wait-millis: 200                              #等待连接获取的最大超时时间
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
 
 eureka:
-  client: #客户端注册进eureka服务列表内
+  client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
       #defaultZone: http://localhost:7001/eureka
