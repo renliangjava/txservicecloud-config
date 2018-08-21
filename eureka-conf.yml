@@ -10,4 +10,4 @@ eureka:
       defaultZone: http://eureka7002.com:7005/eureka/
 env:
   pro
-name: liangggff
+name: liangllljh
